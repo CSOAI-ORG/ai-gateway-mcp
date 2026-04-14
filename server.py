@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """AI Gateway MCP — MEOK AI Labs. Multi-model routing, load balancing, fallback chains."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json, os, time, hashlib
 from datetime import datetime, timezone
 from typing import Optional
@@ -29,8 +34,12 @@ MODELS = {
 _call_log = []
 
 @mcp.tool()
-def route_request(task: str, priority: str = "balanced", max_cost: float = 0.01, require_compliance: str = "", prefer_local: bool = False) -> str:
+def route_request(task: str, priority: str = "balanced", max_cost: float = 0.01, require_compliance: str = "", prefer_local: bool = False, api_key: str = "") -> str:
     """Route an AI request to the optimal model based on task, cost, speed, and compliance requirements."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     candidates = []
     for name, info in MODELS.items():
@@ -46,24 +55,32 @@ def route_request(task: str, priority: str = "balanced", max_cost: float = 0.01,
     candidates.sort(key=lambda x: x["score"], reverse=True)
     best = candidates[0]
     _call_log.append({"model": best["model"], "task": task[:50], "timestamp": datetime.now(timezone.utc).isoformat()})
-    return json.dumps({"recommended": best["model"], "provider": best["provider"], "score": best["score"],
+    return {"recommended": best["model"], "provider": best["provider"], "score": best["score"],
         "cost_per_1k_tokens": best["cost_per_1k"], "alternatives": [c["model"] for c in candidates[1:3]],
-        "compliance": best["compliance"], "all_candidates": candidates[:5]}, indent=2)
+        "compliance": best["compliance"], "all_candidates": candidates[:5]}
 
 @mcp.tool()
-def list_models(filter_provider: str = "", filter_compliance: str = "") -> str:
+def list_models(filter_provider: str = "", filter_compliance: str = "", api_key: str = "") -> str:
     """List all available models with capabilities and pricing."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     models = []
     for name, info in MODELS.items():
         if filter_provider and info["provider"] != filter_provider: continue
         if filter_compliance and filter_compliance not in info["compliance"]: continue
         models.append({"name": name, **info})
-    return json.dumps({"models": models, "total": len(models), "providers": list(set(m["provider"] for m in models))}, indent=2)
+    return {"models": models, "total": len(models), "providers": list(set(m["provider"] for m in models))}
 
 @mcp.tool()
-def cost_estimator(prompt_tokens: int, completion_tokens: int, model: str = "claude-sonnet") -> str:
+def cost_estimator(prompt_tokens: int, completion_tokens: int, model: str = "claude-sonnet", api_key: str = "") -> str:
     """Estimate cost for a specific request across models."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     total_tokens = prompt_tokens + completion_tokens
     costs = {}
@@ -71,18 +88,22 @@ def cost_estimator(prompt_tokens: int, completion_tokens: int, model: str = "cla
         cost = (total_tokens / 1000) * info["cost_per_1k"]
         costs[name] = round(cost, 6)
     costs_sorted = sorted(costs.items(), key=lambda x: x[1])
-    return json.dumps({"tokens": total_tokens, "costs_by_model": dict(costs_sorted),
+    return {"tokens": total_tokens, "costs_by_model": dict(costs_sorted),
         "cheapest": costs_sorted[0][0], "most_expensive": costs_sorted[-1][0],
-        "selected_model_cost": costs.get(model, 0)}, indent=2)
+        "selected_model_cost": costs.get(model, 0)}
 
 @mcp.tool()
-def get_gateway_stats() -> str:
+def get_gateway_stats(api_key: str = "") -> str:
     """Get gateway usage statistics."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     model_counts = defaultdict(int)
     for log in _call_log: model_counts[log["model"]] += 1
-    return json.dumps({"total_calls": len(_call_log), "by_model": dict(model_counts),
-        "recent": _call_log[-5:]}, indent=2)
+    return {"total_calls": len(_call_log), "by_model": dict(model_counts),
+        "recent": _call_log[-5:]}
 
 if __name__ == "__main__":
     mcp.run()

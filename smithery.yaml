@@ -1,8 +1,48 @@
 name: ai-gateway-mcp
-description: MEOK AI Labs — ai gateway
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/ai-gateway-mcp
-license: MIT
-runtime: python
-entrypoint: server.py
+description: "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for\
+  \ everyone."
+version: 1.0.0
+tools:
+- name: route_request
+  description: Route an AI request to the optimal model based on task, cost, speed,
+    and compliance requirements.
+  parameters:
+  - name: task
+    type: string
+    required: true
+  - name: priority
+    type: string
+    required: false
+  - name: max_cost
+    type: number
+    required: false
+  - name: require_compliance
+    type: string
+    required: false
+  - name: prefer_local
+    type: boolean
+    required: false
+- name: list_models
+  description: List all available models with capabilities and pricing.
+  parameters:
+  - name: filter_provider
+    type: string
+    required: false
+  - name: filter_compliance
+    type: string
+    required: false
+- name: cost_estimator
+  description: Estimate cost for a specific request across models.
+  parameters:
+  - name: prompt_tokens
+    type: integer
+    required: true
+  - name: completion_tokens
+    type: integer
+    required: true
+  - name: model
+    type: string
+    required: false
+- name: get_gateway_stats
+  description: Get gateway usage statistics.
+  parameters: []

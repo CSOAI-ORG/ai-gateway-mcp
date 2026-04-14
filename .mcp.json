@@ -1,1 +1,81 @@
-{"name":"ai-gateway-mcp","vendor":"MEOK AI Labs","homepage":"https://meok.ai","repository":"https://github.com/CSOAI-ORG/ai-gateway-mcp","runtime":"python","entrypoint":"server.py"}
+{
+  "name": "ai-gateway-mcp",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "route_request",
+      "description": "Route an AI request to the optimal model based on task, cost, speed, and compliance requirements.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string"
+          },
+          "max_cost": {
+            "type": "number"
+          },
+          "require_compliance": {
+            "type": "string"
+          },
+          "prefer_local": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "task"
+        ]
+      }
+    },
+    {
+      "name": "list_models",
+      "description": "List all available models with capabilities and pricing.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filter_provider": {
+            "type": "string"
+          },
+          "filter_compliance": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "cost_estimator",
+      "description": "Estimate cost for a specific request across models.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "prompt_tokens": {
+            "type": "integer"
+          },
+          "completion_tokens": {
+            "type": "integer"
+          },
+          "model": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "prompt_tokens",
+          "completion_tokens"
+        ]
+      }
+    },
+    {
+      "name": "get_gateway_stats",
+      "description": "Get gateway usage statistics.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
+}
