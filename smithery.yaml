@@ -1,0 +1,8 @@
+name: ai-gateway-mcp
+description: MEOK AI Labs — ai gateway
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/ai-gateway-mcp
+license: MIT
+runtime: python
+entrypoint: server.py
