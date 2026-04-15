@@ -1,6 +1,6 @@
 {
   "name": "ai-gateway-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 AI Gateway. Multi-model routing with intelligent fallback, cost optimization, and com",
+  "description": "Ai Gateway tools for AI agents. Capabilities: route request, list models, cost estimator. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
