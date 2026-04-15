@@ -1,0 +1,10 @@
+{
+  "name": "ai-gateway-mcp",
+  "description": "MEOK AI Labs \u2014 ai-gateway-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/ai-gateway-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
