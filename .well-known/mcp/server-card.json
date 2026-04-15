@@ -1,0 +1,53 @@
+{
+  "name": "ai-gateway",
+  "description": "MEOK AI Labs \u2014 AI Gateway. Multi-model routing with intelligent fallback, cost optimization, and compliance-aware model selection.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/ai-gateway-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "route_request",
+      "description": "Route an AI request to the optimal model based on task, cost, speed, and compliance requirements."
+    },
+    {
+      "name": "list_models",
+      "description": "List all available models with capabilities and pricing."
+    },
+    {
+      "name": "cost_estimator",
+      "description": "Estimate cost for a specific request across models."
+    },
+    {
+      "name": "get_gateway_stats",
+      "description": "Get gateway usage statistics."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
