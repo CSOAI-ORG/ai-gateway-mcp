@@ -1,66 +1,42 @@
-# Ai Gateway
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — MEOK AI Labs — AI Gateway. Multi-model routing with intelligent fallback, cost optimization, and compliance-aware model selection.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/ai-gateway-mcp)](https://github.com/CSOAI-ORG/ai-gateway-mcp/stargazers)
 
-AI Gateway MCP — MEOK AI Labs. Multi-model routing, load balancing, fallback chains.
+# uaiU gatewayU mcp
+
+**Add .well-known/mcp discovery, CI workflow, persistence layer**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/ai-gateway-mcp)](https://www.npmjs.com/package/@meok-ai/ai-gateway-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/ai-gateway-mcp/issues)
+
+</div>
+
+---
+
+## Why This Matters
+
+
 
 ## Installation
 
 ```bash
 pip install ai-gateway-mcp
+# or
+npm install -g @meok-ai/ai-gateway-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install ai-gateway-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `route_request`
-Route an AI request to the optimal model based on task, cost, speed, and compliance requirements.
-
-**Parameters:**
-- `task` (str)
-- `priority` (str)
-- `max_cost` (float)
-- `require_compliance` (str)
-- `prefer_local` (bool)
-
-### `list_models`
-List all available models with capabilities and pricing.
-
-**Parameters:**
-- `filter_provider` (str)
-- `filter_compliance` (str)
-
-### `cost_estimator`
-Estimate cost for a specific request across models.
-
-**Parameters:**
-- `prompt_tokens` (int)
-- `completion_tokens` (int)
-- `model` (str)
-
-### `get_gateway_stats`
-Get gateway usage statistics.
-
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
-
-## Links
-
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/ai-gateway-mcp](https://github.com/CSOAI-ORG/ai-gateway-mcp)
-- **PyPI**: [pypi.org/project/ai-gateway-mcp](https://pypi.org/project/ai-gateway-mcp/)
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
