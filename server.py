@@ -51,6 +51,15 @@ def route_request(task: str, priority: str = "balanced", max_cost: float = 0.01,
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        task (str): The task to analyze or process.
+        priority (str): The priority to analyze or process.
+        max_cost (float): The max cost to analyze or process.
+        require_compliance (str): The require compliance to analyze or process.
+        prefer_local (bool): The prefer local to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -107,6 +116,12 @@ def list_models(filter_provider: str = "", filter_compliance: str = "", api_key:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        filter_provider (str): The filter provider to analyze or process.
+        filter_compliance (str): The filter compliance to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -152,6 +167,13 @@ def cost_estimator(prompt_tokens: int, completion_tokens: int, model: str = "cla
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        prompt_tokens (int): The prompt tokens to analyze or process.
+        completion_tokens (int): The completion tokens to analyze or process.
+        model (str): The model to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -200,6 +222,10 @@ def get_gateway_stats(api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
