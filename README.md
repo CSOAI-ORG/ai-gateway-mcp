@@ -13,7 +13,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
 
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/ai-gateway-mcp/issues)
+[Installation](#installation) · [Docs](https://meok.ai) · [Report Bug](https://github.com/CSOAI-ORG/ai-gateway-mcp/issues)
 
 </div>
 
@@ -38,11 +38,11 @@ See the project repository for full documentation and examples.
 ## Enterprise Support
 
 - 📧 nicholas@meok.ai
-- 🌐 [CSOAI.org](https://csoai.org)
+- 🌐 [meok.ai](https://meok.ai)
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
+MIT © [CSOAI](https://meok.ai)
 
 <!-- meok-moat-footer-v1 -->
 ---
