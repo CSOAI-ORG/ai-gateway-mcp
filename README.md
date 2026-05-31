@@ -1,108 +1,78 @@
-<div align="center">
+# Ai Gateway MCP
 
-[![PyPI](https://img.shields.io/pypi/v/ai-gateway-mcp)](https://pypi.org/project/ai-gateway-mcp/) [![Python](https://img.shields.io/pypi/pyversions/ai-gateway-mcp)](https://pypi.org/project/ai-gateway-mcp/)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/ai_gateway_mcp/)
 
+> Ai Gateway MCP — automation tooling for ai gateway
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/ai-gateway-mcp)](https://github.com/CSOAI-ORG/ai-gateway-mcp/stargazers)
-
-# uaiU gatewayU mcp
-
-**Add .well-known/mcp discovery, CI workflow, persistence layer**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/ai-gateway-mcp)](https://www.npmjs.com/package/@meok-ai/ai-gateway-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://meok.ai) · [Report Bug](https://github.com/CSOAI-ORG/ai-gateway-mcp/issues)
-
-</div>
+Ai Gateway MCP — automation tooling for ai gateway. MIT.
 
 ---
 
-## Why This Matters
-
-
-
-## Installation
+## 🚀 Quick Start
 
 ```bash
-pip install ai-gateway-mcp
-# or
-npm install -g @meok-ai/ai-gateway-mcp
+# Install via pip
+pip install ai_gateway_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install ai-gateway-mcp --client claude
 ```
 
-## Quick Start
+## ✨ Features
 
-See the project repository for full documentation and examples.
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-## Enterprise Support
+## 📖 Documentation
 
-- 📧 nicholas@meok.ai
-- 🌐 [meok.ai](https://meok.ai)
+- [Full Documentation](https://docs.meok.ai/ai-gateway-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-## Wire it up — full stack
+## 🛡️ Compliance
 
-Pair this with the MEOK chain that turns one agent action into ONE signed compliance event:
+This MCP server is built with **EU AI Act compliance** built-in:
 
-1. **bft-progress-council-mcp** — anti-loop guardrail
-2. **agent-token-budget-mcp** — hard spend cap
-3. **agent-prompt-injection-firewall-mcp** — OWASP LLM01 scan
-4. **agent-audit-logger-mcp** — hash-chained evidence
-5. **a2a-governance-bridge-mcp** — fold N attestations → 1 signed event
-6. **agent-incident-relay-mcp** — broadcast incidents to 5 regimes simultaneously
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-See [meok.ai/mcp-stack](https://meok.ai/mcp-stack) for the architecture and [meok.ai/mcp-stack/demo](https://meok.ai/mcp-stack/demo) for the live in-browser demo.
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-## License
+## 🏢 Enterprise
 
-MIT © [CSOAI](https://meok.ai)
+Need custom development, SLA guarantees, or white-label deployment?
 
-<!-- meok-moat-footer-v1 -->
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
+
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
+
+## 🤝 Part of the MEOK Ecosystem
+
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
 ---
 
-## Pairs with MEOK Governance Suite
-
-Build something that touches users? You need compliance. MEOK ships 38 governance MCPs that drop in alongside this tool — EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, FDA SaMD, MDR, Basel, MiFID II, MiCA, COPPA, and more.
-
-```bash
-# One-shot install of the governance pack
-npx meok-setup --pack governance
-```
-
-Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographically signed compliance attestations your auditor verifies independently.
-
-→ Full catalogue: [councilof.ai/catalogue](https://councilof.ai/catalogue)
-→ MEOK AI Labs: [meok.ai](https://meok.ai)
-
-
-
-## Protocol coverage + Universal PAYG
-
-This MCP is part of MEOK's 47-MCP fleet that bridges every active agent-interop protocol
-and 30+ regulatory frameworks. See the full coverage matrix at [meok.ai/protocols](https://meok.ai/protocols).
-
-**Agent interop protocols supported (8 live):**
-
-- ✅ **MCP** (Anthropic) — native
-- ✅ **A2A** (Google + Linux Foundation, absorbed IBM ACP Sept 2025)
-- ✅ **IBM ACP** — covered via A2A merge
-- ◐ **Stripe ACP** (Agentic Commerce Protocol) — Q3 bridge via [agent-commerce-protocol-mcp](https://github.com/CSOAI-ORG/agent-commerce-protocol-mcp)
-- ◐ **AP2** (Google Agent Payments) — partial via [agent-commerce-payments-mcp](https://github.com/CSOAI-ORG/agent-commerce-payments-mcp)
-- ◐ **x402** (Coinbase HTTP 402) — partial via api.meok.ai gateway
-- → **OASF / AGNTCY** (Cisco Outshift + Linux Foundation) — Q3 bridge
-- 👁 **ANP** (Cisco Agent Network) — watch-list
-
-**Pricing options:**
-
-| Option | Price | Best for |
-|---|---|---|
-| Self-host (this MCP) | £0 — MIT | Devs |
-| This MCP Starter | £29/mo | One-MCP teams |
-| This MCP Pro | £79/mo | Production + 24h SLA |
-| [Universal PAYG](https://buy.stripe.com/00w3cxcgAaEGcIBcyQ8k90s) | £29/mo + £0.0002/call | Spiky usage across many MCPs |
-| Substrate bundle (this category) | £99-£499/mo | A whole pack |
-| [MEOK Universe](https://buy.stripe.com/cNi9AV0xS8wy5g9aqI8k90u) | £1,499/mo | All 47 MCPs, 500K calls |
-
-Each tier above the free self-host adds HMAC-signed attestations verifiable at
-`verify.meok.ai`. Linux Foundation governance on the A2A spine means EU regulated
-buyers can deploy without vendor-lock-in objections.
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
