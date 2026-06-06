@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""AI Gateway MCP — MEOK AI Labs. Multi-model routing, load balancing, fallback chains."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+AI Gateway MCP — MEOK AI Labs. Multi-model routing, load balancing, fallback chains."""
 
 import sys, os
 sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
@@ -77,7 +79,7 @@ def route_request(task: str, priority: str = "balanced", max_cost: float = 0.01,
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     candidates = []
@@ -139,7 +141,7 @@ def list_models(filter_provider: str = "", filter_compliance: str = "", api_key:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     models = []
@@ -191,7 +193,7 @@ def cost_estimator(prompt_tokens: int, completion_tokens: int, model: str = "cla
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     total_tokens = prompt_tokens + completion_tokens
@@ -243,7 +245,7 @@ def get_gateway_stats(api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     model_counts = defaultdict(int)

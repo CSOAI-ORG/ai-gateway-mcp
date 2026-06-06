@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "ai-gateway-mcp"
-version = "1.0.4"
+version = "1.0.5"
 readme = "README.md"
 description = "Ai Gateway tools for AI agents. Capabilities: route request, list models, cost estimator. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/ai-gateway-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 ai_gateway_mcp = "server:main"
