@@ -1,0 +1,59 @@
+{
+  "name": "ai-gateway-mcp",
+  "description": "Ai Gateway MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/ai-gateway-mcp.html",
+  "version": "1.0.5",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "route_request",
+      "name": "Route Request",
+      "description": "route_request via ai-gateway-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_models",
+      "name": "List Models",
+      "description": "list_models via ai-gateway-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "cost_estimator",
+      "name": "Cost Estimator",
+      "description": "cost_estimator via ai-gateway-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_gateway_stats",
+      "name": "Get Gateway Stats",
+      "description": "get_gateway_stats via ai-gateway-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

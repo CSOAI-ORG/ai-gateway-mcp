@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "ai-gateway-mcp",
+    "description": "Ai Gateway MCP Server by MEOK AI Labs",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "ai-gateway-mcp"
+      }
+    ],
+    "capabilities": [
+      "route_request",
+      "list_models",
+      "cost_estimator",
+      "get_gateway_stats"
+    ]
+  }
+}
