@@ -138,3 +138,28 @@ buyers can deploy without vendor-lock-in objections.
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "ai-gateway-mcp": {
+      "command": "uvx",
+      "args": ["ai-gateway-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install ai-gateway-mcp` then run the `ai-gateway-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `route_request` to …"
+- "Use `list_models` to …"
+- "Use `cost_estimator` to …"

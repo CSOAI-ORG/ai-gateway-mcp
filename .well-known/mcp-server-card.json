@@ -1,0 +1,25 @@
+{
+  "name": "ai-gateway-mcp",
+  "title": "Ai Gateway Mcp",
+  "description": "Ai Gateway tools for AI agents. Capabilities: route request, list models, cost estimator. Built by MEOK AI Labs.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "route_request"
+    },
+    {
+      "name": "list_models"
+    },
+    {
+      "name": "cost_estimator"
+    },
+    {
+      "name": "get_gateway_stats"
+    }
+  ]
+}

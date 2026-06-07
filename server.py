@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 AI Gateway MCP — MEOK AI Labs. Multi-model routing, load balancing, fallback chains."""
 
 import sys, os

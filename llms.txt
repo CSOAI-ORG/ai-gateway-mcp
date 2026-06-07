@@ -1,0 +1,20 @@
+# ai-gateway-mcp
+
+> Ai Gateway tools for AI agents. Capabilities: route request, list models, cost estimator. Built by MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- route_request
+- list_models
+- cost_estimator
+- get_gateway_stats
+
+## Install
+```
+pip install ai-gateway-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/ai-gateway-mcp/
+- Docs: https://meok.ai
