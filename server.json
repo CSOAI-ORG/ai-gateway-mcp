@@ -4,9 +4,9 @@
   "version": "1.0.8",
   "description": "Ai Gateway MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/ai-gateway-mcp",
-    "source": "https://github.com/CSOAI-ORG/ai-gateway-mcp"
+    "source": "github",
+    "id": "1210245004"
   },
   "packages": [
     {
