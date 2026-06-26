@@ -3,7 +3,11 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "ai-gateway-mcp"
+<<<<<<< Updated upstream
 version = "1.0.10"
+=======
+version = "1.0.5"
+>>>>>>> Stashed changes
 readme = "README.md"
 description = "Ai Gateway tools for AI agents. Capabilities: route request, list models, cost estimator. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
